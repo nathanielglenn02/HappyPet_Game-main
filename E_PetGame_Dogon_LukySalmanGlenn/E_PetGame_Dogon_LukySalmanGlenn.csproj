@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39E6254B-541E-4A66-9C3B-C01C5C0CAC0D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>E_PetGame_Dogon_LukySalmanGlenn</RootNamespace>
+    <AssemblyName>E_PetGame_Dogon_LukySalmanGlenn</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cat.cs" />
+    <Compile Include="Chameleon.cs" />
+    <Compile Include="Fish.cs" />
+    <Compile Include="FormGameChameleon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGameChameleon.Designer.cs">
+      <DependentUpon>FormGameChameleon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGameFish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGameFish.Designer.cs">
+      <DependentUpon>FormGameFish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LetsPlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LetsPlay.Designer.cs">
+      <DependentUpon>LetsPlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pet.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Toy.cs" />
+    <EmbeddedResource Include="FormGameChameleon.resx">
+      <DependentUpon>FormGameChameleon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGameFish.resx">
+      <DependentUpon>FormGameFish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LetsPlay.resx">
+      <DependentUpon>LetsPlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="HappyPetGameClassDiagram.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desain tanpa judul.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome-images-server.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chameleon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form game.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\klik.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_eat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_bath.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chameleon_changeColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chameleonDown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chameleonDown_ChangeColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chameleonUp.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chameleonUp_ChangeColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chameleon_eat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kerincing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse toys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish_reverse.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_reverse.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_sleep.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_vaccinate.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aquarium_dirty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desain-tanpa-judul-5--unscreen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_toy_mouse.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_toy_stick.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_toy_kerincing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aquarium_clean.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish_eat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aquarium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cham_sleep.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piranha_game.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
